@@ -1,23 +1,33 @@
-import { Layout } from 'antd';
-import App, { Container } from 'next/app';
-import React from 'react';
-import '../assets/global.less';
-import NavBar from '../components/NavBar';
-
-const { Content } = Layout;
+import App from "next/app";
+import Head from "next/head";
+import React from "react";
+import "../assets/global.less";
+import BodyContainer from "../components/BodyContainer";
+import Footer from "../components/Footer";
+import NavBar from "../components/NavBar";
+import SubNav from "../components/pro/SubNav";
 
 export default class Photolawn extends App {
   render() {
-    const { Component, pageProps } = this.props;
+    const { Component, pageProps, router } = this.props;
     return (
-      <Container>
-        <Layout>
-          <NavBar title="Photolawn" />
-          <Content style={{ padding: '50px 100px 0 100px' }}>
-            <Component {...pageProps} />
-          </Content>
-        </Layout>
-      </Container>
+      <React.Fragment>
+        <Head>
+          <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.6/css/uikit.min.css"
+          />
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.6/js/uikit.min.js" />
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.6/js/uikit-icons.min.js" />
+        </Head>
+        <NavBar />
+        {router.pathname.includes("pro") && <SubNav />}
+        <BodyContainer>
+          <Component {...pageProps} />
+          <Footer />
+        </BodyContainer>
+      </React.Fragment>
     );
   }
 }
