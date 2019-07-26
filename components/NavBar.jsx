@@ -11,9 +11,7 @@ const NavBar = () => {
         >
           <div className="uk-width-auto">
             <Link href="/">
-              <a className="uk-logo" title="">
-                Photolawn
-              </a>
+              <a className="uk-logo">Photolawn</a>
             </Link>
             {/* <Link href="/" className="uk-logo">
               Photolawn
@@ -39,7 +37,7 @@ const NavBar = () => {
                 </Link>
               </li>
               <li className="uk-visible@s">
-                <Link href="/signin">
+                <Link href="/login">
                   <a>Sign in</a>
                 </Link>
               </li>
