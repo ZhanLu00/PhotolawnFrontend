@@ -1,60 +1,47 @@
-import { Col, Row, Typography } from "antd";
 import React from "react";
-import styled from "styled-components";
+import CategoryCard from "../components/home/CategoryCard";
 import data from "./category";
-
-const { Title } = Typography;
 
 const HomePage = () => {
   return (
     <React.Fragment>
-      <Row type="flex" justify="center">
-        <Col>
-          <Title level={3}>
-            Find professional photographers for any occasion
-          </Title>
-        </Col>
-      </Row>
-      <Row type="flex" justify="center" gutter={8}>
-        {data.map((category, index) => {
-          return (
-            <Col span={6}>
-              <CategoryCard image={category.image}>
-                <CategoryTitle>{category.title}</CategoryTitle>
-              </CategoryCard>
-            </Col>
-          );
-        })}
-      </Row>
+      <div className="uk-container uk-container-small uk-text-center uk-padding">
+        <h3 className="uk-text-bold">
+          Book a professional photographer for any occasion
+        </h3>
+        <form className="uk-grid-small" data-uk-grid>
+          <div className="uk-width-1-2">
+            <input
+              className="uk-input uk-border-rounded"
+              type="text"
+              placeholder="Wedding photographer"
+            />
+          </div>
+          <div className="uk-width-1-2">
+            <input
+              className="uk-input uk-border-rounded"
+              type="text"
+              placeholder="Toronto"
+            />
+          </div>
+        </form>
+      </div>
+      <div
+        className="uk-grid-small uk-child-width-1-6@l uk-child-width-1-5@m uk-flex-center uk-text-center"
+        data-uk-grid
+      >
+        <CategoryCard
+          title="hey"
+          image="https://res.cloudinary.com/lawn/image/upload/v1540673760/static/family.png"
+        />
+        {data
+          .filter(index => index < data.length / 2)
+          .map(item => {
+            return <CategoryCard title={item.title} image={item.image} />;
+          })}
+      </div>
     </React.Fragment>
   );
 };
 
 export default HomePage;
-
-const CategoryCard = styled.div`
-  width: 200px;
-  height: 250px;
-  border-radius: 3px;
-  padding-bottom: 20px;
-  background-image: linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 0),
-      rgba(0, 0, 0, 0.72)
-    ),
-    url(${props => props.image});
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-`;
-
-const CategoryTitle = styled.div`
-  position: absolute !important;
-  text-align: center !important;
-  padding-right: 50px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  color: white;
-  font-weight: 700;
-`;
