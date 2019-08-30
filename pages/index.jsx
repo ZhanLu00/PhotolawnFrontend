@@ -1,6 +1,7 @@
 import React from "react";
 import CategoryCard from "../components/home/CategoryCard";
 import data from "./category";
+import Link from "next/link";
 
 const HomePage = () => {
   return (
@@ -39,6 +40,11 @@ const HomePage = () => {
           .map(item => {
             return <CategoryCard title={item.title} image={item.image} />;
           })}
+      </div>
+      <div>
+          <Link href="orderTracking.jsx">
+            <a>orderTracking</a>
+          </Link>
       </div>
     </React.Fragment>
   );
