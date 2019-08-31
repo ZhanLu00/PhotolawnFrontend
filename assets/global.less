@@ -1,52 +1,181 @@
-:global {
-  .ant-page-header {
-    border-bottom: 1px solid #d4dadf;
-    box-shadow: 0 3px 8px 0 rgba(116, 129, 141, 0.1);
-  }
-  .watch .ant-modal-header {
-    text-align: center;
-  }
-  .ant-card-body {
-    padding: 0 24px !important;
-  }
-  .ant-carousel .slick-slide {
-    cursor: default;
-    height: 100%;
-    overflow: hidden;
-  }
-  .highlight {
-    background-color: rgba(12, 242, 150, 0.5);
-  }
-  .highlight:hover {
-    cursor: pointer;
-    background-color: rgba(12, 235, 160, 0.9);
-  }
-  .ant-rate-star {
-    margin-right: 0 !important;
-  }
+.uk-body-container {
+  max-width: 1000px !important;
 }
 
-.imageCaption {
-  font-size: 12px;
-  color: grey;
+.pl-simple-label {
+  color: black;
+  background-color: #ffffff;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 0.1);
 }
 
-.imageCaption:hover {
-  background-color: rgb(245, 247, 249);
+.pl-style-card {
+  height: 80px;
+  width: 250px;
 }
 
-.navBar {
-  background-color: #fff;
-  border-bottom: 1px solid #d4dadf;
-  box-shadow: 0 3px 8px 0 rgba(116, 129, 141, 0.1);
+.pl-full-width {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
 
-.contentContainer {
-  padding: 50px 200px 50px 80px;
+.pl-category-hero {
+  height: 150px;
 }
 
-.contentCard {
+.uk-gear-card {
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  padding: 15px;
+}
+
+#pl-navbar {
+  padding: 10px 0;
+  background-color: white;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.pl-search-bar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pl-branding-sub-nav {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+#pl-footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+img[data-src][src*="data:image"] {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.pl-category-card {
+  width: 360px;
+  height: 512px;
   border-radius: 5px;
-  border-color: rgb(230, 236, 241);
-  box-shadow: 0px 3px 8px 0px rgba(116, 129, 141, 0.1);
+  background-image: radial-gradient(
+    circle at 50% 0,
+    rgba(255, 255, 255, 0.5),
+    rgba(0, 0, 0, 0.5)
+  );
 }
+
+.pl-category-wedding {
+  width: 200px;
+  height: 250px;
+  border-radius: 3px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0),
+      rgba(0, 0, 0, 0.72)
+    ),
+    url("https://images.unsplash.com/photo-1514149529177-e2053bf69625?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1646eb60bc33ac44b722e621980b629e&auto=format&fit=crop&w=800&q=60");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.pl-category-new-born {
+  width: 200px;
+  height: 250px;
+  border-radius: 3px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0),
+      rgba(0, 0, 0, 0.72)
+    ),
+    url("https://images.unsplash.com/photo-1524492188898-7e0f39d0ec03?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=71537e448b3e64081c2a5a1f17902fb0&auto=format&fit=crop&w=1650&q=80");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.pl-category-family {
+  width: 200px;
+  height: 250px;
+  border-radius: 3px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0),
+      rgba(0, 0, 0, 0.72)
+    ),
+    url("https://res.cloudinary.com/lawn/image/upload/v1540673760/static/family.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.pl-category-graduation {
+  width: 200px;
+  height: 250px;
+  border-radius: 3px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0),
+      rgba(0, 0, 0, 0.72)
+    ),
+    url("https://images.unsplash.com/photo-1464582883107-8adf2dca8a9f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=606f4642ce2712fde3eddef7a3bec34e&auto=format&fit=crop&w=800&q=60");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+// :global {
+
+//   .ant-page-header {
+//     border-bottom: 1px solid #d4dadf;
+//     box-shadow: 0 3px 8px 0 rgba(116, 129, 141, 0.1);
+//   }
+//   .watch .ant-modal-header {
+//     text-align: center;
+//   }
+//   .ant-card-body {
+//     padding: 0 24px !important;
+//   }
+//   .ant-carousel .slick-slide {
+//     cursor: default;
+//     height: 100%;
+//     overflow: hidden;
+//   }
+//   .highlight {
+//     background-color: rgba(12, 242, 150, 0.5);
+//   }
+//   .highlight:hover {
+//     cursor: pointer;
+//     background-color: rgba(12, 235, 160, 0.9);
+//   }
+//   .ant-rate-star {
+//     margin-right: 0 !important;
+//   }
+// }
+
+// .imageCaption {
+//   font-size: 12px;
+//   color: grey;
+// }
+
+// .imageCaption:hover {
+//   background-color: rgb(245, 247, 249);
+// }
+
+// .navBar {
+//   background-color: #fff;
+//   border-bottom: 1px solid #d4dadf;
+//   box-shadow: 0 3px 8px 0 rgba(116, 129, 141, 0.1);
+// }
+
+// .contentContainer {
+//   padding: 50px 200px 50px 80px;
+// }
+
+// .contentCard {
+//   border-radius: 5px;
+//   border-color: rgb(230, 236, 241);
+//   box-shadow: 0px 3px 8px 0px rgba(116, 129, 141, 0.1);
+// }
