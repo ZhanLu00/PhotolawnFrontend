@@ -22,7 +22,8 @@ export default class Photolawn extends App {
           <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.6/js/uikit-icons.min.js" />
         </Head>
         <NavBar />
-        {router.pathname.includes("pro") && <SubNav />}
+        {(router.pathname.includes("pro") ||
+          router.pathname.includes("portfolio")) && <SubNav />}
         <BodyContainer>
           <Component {...pageProps} />
           <Footer />

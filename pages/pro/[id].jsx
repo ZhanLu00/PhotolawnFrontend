@@ -7,8 +7,8 @@ const ProfilePage = () => {
   return (
     <React.Fragment>
       <TopProfile />
-      <Biography />
       <Portfolio />
+      <Biography />
     </React.Fragment>
   );
 };

@@ -13,13 +13,14 @@ const PortfolioPage = () => {
         <div className="uk-width-1-6@m uk-padding-remove">
           <img src="http://static1.squarespace.com/static/5c49faec70e80221e49dbd74/t/5c4a074b562fa72365a1440c/1562640619999/%3Fformat=750w" />
         </div>
-        <div className="uk-width-5-6@m  uk-padding-small">
+        <div className="uk-width-5-6@m uk-padding-small">
           <h3>New Born and Baby Portfolio</h3>
           <p>
             Our baby photography focuses on preserving the most precious moments
             of your family. We offer excellent service to make sure you're
             happy.
           </p>
+          <p>Styles offered: Simple, Magical</p>
         </div>
       </div>
       <div
